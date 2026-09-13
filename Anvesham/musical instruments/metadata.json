@@ -1,6 +1,0 @@
-{
-  "name": "ItihaasX",
-  "description": "An interactive 3D musical heritage village where you explore Indian musical instruments, meet living maestros, and experience a narrative storyline across acoustic traditions.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

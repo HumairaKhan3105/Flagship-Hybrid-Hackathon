@@ -557,33 +557,12 @@ Recommended flow:
 
 # 🖼️ Screenshots
 
-> Add screenshots of the actual working application here.
+<img width="1917" height="910" alt="Screenshot 2026-09-13 122930" src="https://github.com/user-attachments/assets/b4c988ee-9544-4ae7-9fba-db566d2a7dce" />
+<img width="1917" height="916" alt="Screenshot 2026-09-13 123003" src="https://github.com/user-attachments/assets/7a4889d9-a9da-48c9-94e7-f65cb1132c09" />
+<img width="1917" height="918" alt="Screenshot 2026-09-13 123017" src="https://github.com/user-attachments/assets/9346c1c0-3918-448c-bba6-827768a376fa" />
+<img width="1917" height="910" alt="Screenshot 2026-09-13 123038" src="https://github.com/user-attachments/assets/5e5636b4-d9e5-42c6-9a89-6dbbca53c4a3" />
+<img width="1917" height="917" alt="Screenshot 2026-09-13 123411" src="https://github.com/user-attachments/assets/4650ba50-922d-4bf0-b444-a3e5bdf0b162" />
 
-Recommended showcase:
-
-### 🏠 Landing Page
-
-`/screenshots/landing.png`
-
-### 🌍 Cultural Worlds
-
-`/screenshots/worlds.png`
-
-### 🧩 Quiz / Puzzle
-
-`/screenshots/quiz.png`
-
-### 🔥 Daily Case
-
-`/screenshots/daily-case.png`
-
-### 🏆 Leaderboard
-
-`/screenshots/leaderboard.png`
-
-### 👨‍💼 Admin Dashboard
-
-`/screenshots/admin.png`
 
 ---
 

@@ -15,6 +15,7 @@ dist-ssr/
 .nitro/
 .wrangler/
 .lovable/
+.vercel/
 
 # Environment
 .env

@@ -5,7 +5,7 @@
   "description": "ANVESHAM — Explore India's Timeless Heritage",
   "scripts": {
     "dev": "npm run dev --prefix \"landing front page\"",
-    "build": "npm run build --prefix \"landing front page\"",
+    "build": "npm --prefix \"landing front page\" install && npm --prefix \"landing front page\" run build && node copy-output.js",
     "preview": "npm run preview --prefix \"landing front page\"",
     "dev:landing": "npm run dev --prefix \"landing front page\"",
     "dev:places": "npm run dev --prefix \"famous places\"",

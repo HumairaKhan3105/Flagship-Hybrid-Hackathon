@@ -2,10 +2,12 @@
   "name": "anvesham",
   "version": "1.0.0",
   "private": true,
-  "description": "ANVESHAM — Explore India's Timeless Heritage",
+  "workspaces": [
+    "landing front page"
+  ],
   "scripts": {
     "dev": "npm run dev --prefix \"landing front page\"",
-    "build": "npm --prefix \"landing front page\" install && npm --prefix \"landing front page\" run build && node copy-output.js",
+    "build": "npm --prefix \"landing front page\" install --include=dev && npm --prefix \"landing front page\" run build && node copy-output.js",
     "preview": "npm run preview --prefix \"landing front page\"",
     "dev:landing": "npm run dev --prefix \"landing front page\"",
     "dev:places": "npm run dev --prefix \"famous places\"",

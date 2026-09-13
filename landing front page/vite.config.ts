@@ -15,5 +15,10 @@ export default defineConfig({
   nitro: {
     // Target Vercel serverless functions instead of the default Cloudflare Workers preset.
     preset: "vercel",
+    vercel: {
+      functions: {
+        runtime: "nodejs22.x",
+      },
+    },
   },
 });

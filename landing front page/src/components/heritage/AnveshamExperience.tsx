@@ -5,7 +5,6 @@ import { useNavigate } from "@tanstack/react-router";
 
 import introFilm from "@/assets/anvesham-intro.mp4.asset.json";
 import filmPoster from "@/assets/anvesham-film-poster.jpg.asset.json";
-import emblem from "@/assets/satyamev-emblem.png";
 import { Button } from "@/components/ui/button";
 import { WORLDS, type World } from "./data";
 
@@ -276,8 +275,8 @@ function Hero({
         </div>
       </header>
 
-      <div className="relative z-20 mx-auto grid min-h-[100svh] max-w-7xl items-center gap-2 px-5 pb-16 pt-24 sm:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:px-16">
-        <div className="max-w-3xl text-center lg:text-left">
+      <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-5xl flex-col items-center justify-center px-5 pb-16 pt-24 text-center sm:px-10 lg:px-16">
+        <div className="max-w-3xl text-center">
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -298,7 +297,7 @@ function Hero({
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.55, duration: 0.9 }}
-            className="font-title mx-auto mt-5 max-w-xl text-xl text-parchment sm:text-3xl lg:mx-0"
+            className="font-title mx-auto mt-5 max-w-xl text-xl text-parchment sm:text-3xl"
           >
             Explore India’s Timeless Heritage
           </motion.p>
@@ -306,7 +305,7 @@ function Hero({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.75, duration: 1 }}
-            className="mx-auto mt-4 max-w-lg text-sm leading-7 text-muted-foreground sm:text-base lg:mx-0"
+            className="mx-auto mt-4 max-w-lg text-sm leading-7 text-muted-foreground sm:text-base"
           >
             Cross the threshold. Follow six paths through celebration, flavour, craft, sound,
             memory, and stone.
@@ -315,7 +314,7 @@ function Hero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.8 }}
-            className="mt-8 flex justify-center lg:justify-start"
+            className="mt-8 flex justify-center"
           >
             <Button
               type="button"
@@ -327,35 +326,10 @@ function Hero({
             </Button>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.82 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.65, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="mx-auto hidden w-full max-w-md lg:block"
-        >
-          <RotatingEmblem />
-        </motion.div>
       </div>
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-28 bg-gradient-to-t from-background to-transparent" />
     </section>
-  );
-}
-
-function RotatingEmblem() {
-  return (
-    <div className="emblem-stage relative aspect-square w-full" aria-label="Rotating Satyamev Jayate emblem">
-      <div className="emblem-aura absolute inset-[10%] rounded-full" />
-      <div className="emblem-rotor absolute inset-0">
-        <div className="emblem-face absolute inset-0 grid place-items-center">
-          <img src={emblem} alt="Satyamev Jayate Lion Capital emblem" width={1024} height={1280} className="h-full w-full object-contain drop-shadow-2xl" />
-        </div>
-        <div className="emblem-face emblem-back absolute inset-0 grid place-items-center" aria-hidden>
-          <img src={emblem} alt="" width={1024} height={1280} className="h-full w-full object-contain opacity-70" />
-        </div>
-      </div>
-    </div>
   );
 }
 
@@ -467,7 +441,6 @@ function ExplorationPaths({ onOpen }: { onOpen: (world: World) => void }) {
         </div>
 
         <div className="mt-20 border-t border-primary/20 pt-8 text-center">
-          <img src={emblem} alt="Satyamev Jayate" width={1024} height={1280} loading="lazy" className="mx-auto h-20 w-20 object-contain opacity-75" />
           <p className="mt-3 font-display text-xs uppercase tracking-[0.28em] text-primary/70">Truth alone triumphs</p>
         </div>
       </div>

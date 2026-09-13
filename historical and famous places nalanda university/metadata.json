@@ -1,0 +1,6 @@
+{
+  "name": "Nalanda Mystery: An Indian Legacy, A Global Story",
+  "description": "A cinematic AAA Indian heritage mystery game UI concept sheet featuring 11 interactive screens: main menu, third-person exploration, NPC dialogue, journal, mathematics puzzle, astronomy puzzle, knowledge web, ancient map, inventory, moral choice, and emotional ending.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

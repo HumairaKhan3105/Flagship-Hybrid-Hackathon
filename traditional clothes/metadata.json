@@ -1,0 +1,6 @@
+{
+  "name": "Vastra Yatra – Journey Through India's Heritage",
+  "description": "An immersive AAA 3D adventure game UI exploring India's traditional clothing, regional textiles, culture, and history with interactive 3D map, pattern challenges, quizzes, collectible wardrobe, and AI Culture Guide companion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

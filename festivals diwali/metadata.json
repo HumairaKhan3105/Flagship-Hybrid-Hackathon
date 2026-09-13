@@ -1,0 +1,6 @@
+{
+  "name": "Culture Detective",
+  "description": "Discover India Through Games — an interactive cultural adventure exploring festivals, traditional clothes, food, musical instruments, art, and famous places with 300+ levels.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

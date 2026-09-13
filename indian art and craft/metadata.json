@@ -1,0 +1,6 @@
+{
+  "name": "KalaYatra – Journey Through Indian Art & Craft",
+  "description": "A 3D educational adventure game exploring traditional Indian arts and crafts through exploration, interactive mini-games, puzzles, and painting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

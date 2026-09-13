@@ -1,0 +1,404 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * NALANDA MYSTERY — Heritage adventure design system.
+ * Palette: deep ink night, ancient gold, saffron ember, parchment, temple jade.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-ember: var(--ember);
+  --color-jade: var(--jade);
+  --color-indigo-ink: var(--indigo-ink);
+  --color-parchment: var(--parchment);
+  --color-parchment-dark: var(--parchment-dark);
+  --font-display: "Cinzel", Georgia, serif;
+  --font-title: "Marcellus", Georgia, serif;
+  --font-body: "Mukta", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.145 0.025 48);
+  --foreground: oklch(0.93 0.03 85);
+  --card: oklch(0.215 0.04 48);
+  --card-foreground: oklch(0.94 0.025 85);
+  --popover: oklch(0.2 0.03 55);
+  --popover-foreground: oklch(0.94 0.025 85);
+  --primary: oklch(0.8 0.13 78);
+  --primary-foreground: oklch(0.18 0.03 55);
+  --secondary: oklch(0.3 0.04 60);
+  --secondary-foreground: oklch(0.93 0.03 85);
+  --muted: oklch(0.26 0.03 58);
+  --muted-foreground: oklch(0.78 0.035 78);
+  --accent: oklch(0.66 0.16 39);
+  --accent-foreground: oklch(0.15 0.02 55);
+  --destructive: oklch(0.58 0.21 27);
+  --destructive-foreground: oklch(0.96 0.01 85);
+  --border: oklch(0.42 0.06 72 / 45%);
+  --input: oklch(0.42 0.06 72 / 40%);
+  --ring: oklch(0.78 0.14 82);
+
+  --gold: oklch(0.8 0.13 78);
+  --gold-bright: oklch(0.91 0.12 88);
+  --ember: oklch(0.63 0.16 39);
+  --jade: oklch(0.6 0.09 172);
+  --indigo-ink: oklch(0.3 0.08 265);
+  --parchment: oklch(0.92 0.05 87);
+  --parchment-dark: oklch(0.8 0.07 80);
+
+  --gradient-dusk: linear-gradient(
+    180deg,
+    oklch(0.32 0.07 70) 0%,
+    oklch(0.22 0.04 55) 55%,
+    oklch(0.15 0.025 50) 100%
+  );
+  --gradient-gold: linear-gradient(100deg, var(--ember), var(--gold-bright) 55%, var(--gold));
+  --gradient-parchment: linear-gradient(160deg, oklch(0.93 0.05 88), oklch(0.83 0.07 80));
+  --shadow-glow: 0 0 32px color-mix(in oklab, var(--gold) 42%, transparent);
+  --shadow-deep: 0 26px 60px -22px oklch(0.09 0.02 50 / 85%);
+  --ease-heritage: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    letter-spacing: 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: 0;
+  }
+
+  ::selection {
+    background: var(--gold);
+    color: var(--primary-foreground);
+  }
+}
+
+/* ---------- ANVESHAM cinematic experience ---------- */
+
+@utility cinematic-vignette {
+  background:
+    linear-gradient(180deg, color-mix(in oklab, var(--background) 45%, transparent), transparent 32%, color-mix(in oklab, var(--background) 72%, transparent)),
+    radial-gradient(ellipse at center, transparent 42%, color-mix(in oklab, var(--background) 76%, transparent) 100%);
+}
+
+@utility hero-film-grade {
+  background:
+    linear-gradient(90deg, color-mix(in oklab, var(--background) 90%, transparent) 0%, color-mix(in oklab, var(--background) 56%, transparent) 44%, color-mix(in oklab, var(--background) 28%, transparent) 75%, color-mix(in oklab, var(--background) 58%, transparent) 100%),
+    linear-gradient(180deg, color-mix(in oklab, var(--background) 24%, transparent), transparent 42%, var(--background) 100%);
+}
+
+@utility sun-shaft {
+  background: linear-gradient(112deg, transparent 46%, color-mix(in oklab, var(--gold-bright) 14%, transparent) 54%, transparent 64%);
+  mix-blend-mode: screen;
+  animation: shaft-drift 9s ease-in-out infinite alternate;
+}
+
+@utility journey-button {
+  background: var(--gradient-gold);
+  box-shadow: 0 14px 45px color-mix(in oklab, var(--ember) 28%, transparent);
+  &:hover {
+    box-shadow: 0 18px 58px color-mix(in oklab, var(--gold) 40%, transparent);
+  }
+}
+
+@utility path-texture {
+  opacity: 0.45;
+  background-image:
+    linear-gradient(color-mix(in oklab, var(--gold) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, var(--gold) 6%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, transparent, black 14%, black 86%, transparent);
+}
+
+@utility path-card-shade {
+  background: linear-gradient(180deg, transparent 20%, color-mix(in oklab, var(--background) 46%, transparent) 54%, var(--background) 100%);
+}
+
+@utility path-card-glint {
+  opacity: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(110deg, transparent 38%, color-mix(in oklab, var(--gold-bright) 15%, transparent) 48%, transparent 60%);
+  transition: opacity 500ms ease, transform 900ms var(--ease-heritage);
+  .group:hover & {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+}
+
+@utility heritage-fact {
+  transition: border-color 300ms ease, background-color 300ms ease, transform 300ms ease;
+  &:hover {
+    border-color: var(--gold);
+    background-color: color-mix(in oklab, var(--card) 76%, transparent);
+    transform: translateY(-3px);
+  }
+}
+
+.emblem-stage {
+  perspective: 1400px;
+}
+
+.emblem-aura {
+  background: radial-gradient(circle, color-mix(in oklab, var(--gold-bright) 28%, transparent), transparent 68%);
+  filter: blur(24px);
+  animation: aura-breathe 4.5s ease-in-out infinite;
+}
+
+.emblem-rotor {
+  transform-style: preserve-3d;
+  animation: emblem-turn 16s linear infinite;
+}
+
+.emblem-face {
+  backface-visibility: hidden;
+}
+
+.emblem-back {
+  transform: rotateY(180deg);
+  filter: sepia(0.45) brightness(0.68);
+}
+
+.heritage-particle {
+  width: 3px;
+  height: 3px;
+  opacity: 0;
+  box-shadow: 0 0 12px var(--gold-bright);
+  animation: heritage-drift linear infinite;
+}
+
+@keyframes emblem-turn {
+  0% { transform: rotateY(-18deg) rotateX(2deg); }
+  50% { transform: rotateY(198deg) rotateX(-2deg); }
+  100% { transform: rotateY(342deg) rotateX(2deg); }
+}
+
+@keyframes aura-breathe {
+  0%, 100% { opacity: 0.45; transform: scale(0.92); }
+  50% { opacity: 0.8; transform: scale(1.06); }
+}
+
+@keyframes heritage-drift {
+  0% { opacity: 0; transform: translate3d(0, 0, 0) scale(0.5); }
+  12% { opacity: 0.7; }
+  70% { opacity: 0.35; }
+  100% { opacity: 0; transform: translate3d(34px, -90vh, 0) scale(1.2); }
+}
+
+@keyframes shaft-drift {
+  from { opacity: 0.45; transform: translateX(-2%); }
+  to { opacity: 0.8; transform: translateX(3%); }
+}
+
+/* ---------- utilities ---------- */
+
+@utility text-gold-gradient {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility surface-parchment {
+  background: var(--gradient-parchment);
+  color: oklch(0.24 0.04 55);
+}
+
+@utility surface-dusk {
+  background: var(--gradient-dusk);
+}
+
+@utility glow-gold {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility panel-carved {
+  background:
+    linear-gradient(
+      160deg,
+      color-mix(in oklab, var(--card) 88%, transparent),
+      color-mix(in oklab, var(--background) 92%, transparent)
+    );
+  border: 1px solid color-mix(in oklab, var(--gold) 34%, transparent);
+  box-shadow: var(--shadow-deep);
+  backdrop-filter: blur(10px);
+}
+
+@utility grain-overlay {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    mix-blend-mode: soft-light;
+    background-image: radial-gradient(
+        color-mix(in oklab, var(--parchment) 40%, transparent) 0.5px,
+        transparent 0.6px
+      ),
+      radial-gradient(color-mix(in oklab, var(--gold) 30%, transparent) 0.5px, transparent 0.6px);
+    background-size:
+      3px 3px,
+      7px 7px;
+    background-position:
+      0 0,
+      2px 3px;
+  }
+}
+
+@utility mandala-ring {
+  background-image: conic-gradient(
+    from 0deg,
+    transparent 0deg 8deg,
+    color-mix(in oklab, var(--gold) 55%, transparent) 8deg 10deg,
+    transparent 10deg 20deg
+  );
+  border-radius: 9999px;
+}
+
+/* ---------- keyframes ---------- */
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(3deg);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scaleY(1) translateY(0);
+  }
+  50% {
+    transform: scaleY(1.015) translateY(-2px);
+  }
+}
+
+@keyframes ember-rise {
+  0% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-70vh) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--gold) 55%, transparent);
+  }
+  60% {
+    box-shadow: 0 0 0 18px transparent;
+  }
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@utility animate-float-soft {
+  animation: float-soft 7s ease-in-out infinite;
+}
+
+@utility animate-breathe {
+  animation: breathe 3.6s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@utility animate-ember {
+  animation: ember-rise linear infinite;
+}
+
+@utility animate-pulse-glow {
+  animation: pulse-glow 2.6s ease-out infinite;
+}
+
+@utility animate-spin-slow {
+  animation: spin-slow 44s linear infinite;
+}
+
+@utility animate-shimmer {
+  animation: shimmer-sweep 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .emblem-rotor {
+    transform: rotateY(-12deg);
+  }
+}

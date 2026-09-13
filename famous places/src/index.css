@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cinzel', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: #0d0a07;
+    color: #e6ded4;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar for Journal and UI panels */
+.parchment-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.parchment-scroll::-webkit-scrollbar-track {
+  background: rgba(30, 20, 10, 0.4);
+  border-radius: 3px;
+}
+.parchment-scroll::-webkit-scrollbar-thumb {
+  background: #966f33;
+  border-radius: 3px;
+}
+.parchment-scroll::-webkit-scrollbar-thumb:hover {
+  background: #c59b48;
+}
+
+/* Atmospheric Glows and Gradients */
+.gold-glow {
+  text-shadow: 0 0 16px rgba(234, 179, 8, 0.6), 0 0 32px rgba(217, 119, 6, 0.3);
+}
+
+.box-gold-glow {
+  box-shadow: 0 0 25px rgba(217, 119, 6, 0.35), inset 0 0 15px rgba(245, 158, 11, 0.15);
+}
+
+.box-stone {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(217, 119, 6, 0.25);
+}
+
+@keyframes torchFlicker {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  25% { opacity: 1; transform: scale(1.05); }
+  50% { opacity: 0.75; transform: scale(0.97); }
+  75% { opacity: 0.95; transform: scale(1.02); }
+}
+
+.animate-torch {
+  animation: torchFlicker 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}

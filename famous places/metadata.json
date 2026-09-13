@@ -1,0 +1,6 @@
+{
+  "name": "Hampi Echoes: The Stone Chariot Secret",
+  "description": "A 3D historical mystery adventure game exploring ancient Vijayanagara, decoding temple inscriptions, and uncovering the lost royal decree.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

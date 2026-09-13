@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-cinzel: 'Cinzel', serif;
+    --font-decorative: 'Cinzel Decorative', serif;
+    --font-marcellus: 'Marcellus', serif;
+    --font-kalam: 'Kalam', cursive;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+.font-decorative {
+  font-family: 'Cinzel Decorative', serif;
+}
+.font-marcellus {
+  font-family: 'Marcellus', serif;
+}
+.font-kalam {
+  font-family: 'Kalam', cursive;
+}
+
+/* AAA Ancient Indian Game UI styles */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fff2c4 0%, #e5c158 50%, #9e7514 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border-color: rgba(212, 175, 55, 0.45);
+}
+
+.gold-box-shadow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.12), inset 0 0 15px rgba(212, 175, 55, 0.05);
+}
+
+.parchment-bg {
+  background-color: #f5edd6;
+  background-image: radial-gradient(#dfd1b0 1px, transparent 1px), radial-gradient(#d6c59f 1px, #f5edd6 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+/* Custom scrollbar for game UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060b18;
+}
+::-webkit-scrollbar-thumb {
+  background: #c59b27;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e5c158;
+}

@@ -1,0 +1,133 @@
+export interface MusicRiddle {
+  id: string;
+  riddle: string;
+  options: string[];
+  correctIndex: number;
+  explanation: string;
+  instrumentName: string;
+  instrumentHindi: string;
+  category: string;
+}
+
+export const MUSIC_RIDDLES: MusicRiddle[] = [
+  {
+    id: 'riddle-bansuri',
+    riddle: 'I have no tongue, yet I speak Krishna’s heart. Seven holes upon my hollow body breathe sweet melodies across the river. What instrument am I?',
+    options: ['Shehnai', 'Bansuri', 'Harmonium', 'Pepa'],
+    correctIndex: 1,
+    explanation: 'The Bansuri is carved from a single natural hollow bamboo node. With no mechanical reed or keys, the player creates microtonal swaras purely through embouchure and partial fingerings.',
+    instrumentName: 'Bansuri (Flute)',
+    instrumentHindi: 'बांसुरी',
+    category: 'Sushira (Wind)',
+  },
+  {
+    id: 'riddle-tabla',
+    riddle: 'Two drums sit side by side: one made of clay or brass that bellows low, one of shisham wood that rings high. A black paste of iron and soot rests upon our heads. Who are we?',
+    options: ['Dholak', 'Mridangam', 'Tabla', 'Pakhawaj'],
+    correctIndex: 2,
+    explanation: 'The Tabla consists of the Bayan (left bass drum) and Dayan (right treble drum). The black central disc, called Syahi, is a secret paste of iron powder and rice starch that produces bell-like overtones.',
+    instrumentName: 'Tabla (Dayan & Bayan)',
+    instrumentHindi: 'तबला',
+    category: 'Avanaddha (Percussion)',
+  },
+  {
+    id: 'riddle-veena',
+    riddle: 'I am carved from a single block of jackwood with a secondary gourd resonator and a dragon neck. Goddess Saraswati cradles me upon her lap as the mother of all strings. Who am I?',
+    options: ['Saraswati Veena', 'Sitar', 'Sarod', 'Tanpura'],
+    correctIndex: 0,
+    explanation: 'The Saraswati Veena is one of ancient India’s oldest stringed instruments. It features 24 fixed brass frets set in beeswax and 7 strings (4 main melody strings and 3 side drone/talam strings).',
+    instrumentName: 'Saraswati Veena',
+    instrumentHindi: 'सरस्वती वीणा',
+    category: 'Tata (Plucked String)',
+  },
+  {
+    id: 'riddle-shehnai',
+    riddle: 'No auspicious wedding or temple sanctum in Varanasi awakens without my morning call. Made of wood with a flared brass bell and a quadruple reed. Who am I?',
+    options: ['Nadaswaram', 'Bansuri', 'Shehnai', 'Pungi'],
+    correctIndex: 2,
+    explanation: 'The Shehnai is recognized as the ultimate "Mangal Vadya" (auspicious instrument). Immortalized by Ustad Bismillah Khan, it was elevated from royal naubat-khanas to the global concert stage.',
+    instrumentName: 'Shehnai',
+    instrumentHindi: 'शहनाई',
+    category: 'Sushira (Wind)',
+  },
+  {
+    id: 'riddle-sarangi',
+    riddle: 'I have up to 40 strings and dozens of sympathetic resonance wires beneath my gut melody strings. Musicians call me "the instrument of a hundred colors" because I weep like the human voice. Who am I?',
+    options: ['Ravanahatha', 'Sarangi', 'Dotara', 'Dilruba'],
+    correctIndex: 1,
+    explanation: 'The name Sarangi comes from "Sau Rang" (a hundred colors). It is played not with fingertips, but by sliding the cuticles and fingernails sideways against thick goat-gut strings, mimicking vocal meend.',
+    instrumentName: 'Sarangi',
+    instrumentHindi: 'सारंगी',
+    category: 'Tata (Bowed String)',
+  },
+  {
+    id: 'riddle-ektara',
+    riddle: 'My name means "one string", though I can carry two. Desert bauls and wandering mystic bards pluck me as they sing of divine love under open skies. Who am I?',
+    options: ['Ektara', 'Tumbi', 'Kamaicha', 'Dotara'],
+    correctIndex: 0,
+    explanation: 'The Ektara ("one string") is constructed from a split bamboo cane attached to a dried pumpkin or coconut gourd covered in skin. Squeezing the split bamboo neck alters the tension and pitch.',
+    instrumentName: 'Ektara',
+    instrumentHindi: 'एकतारा',
+    category: 'Tata (Plucked String)',
+  },
+  {
+    id: 'riddle-ghatam',
+    riddle: 'I am not made of wood or skin, but of sacred earth baked with brass dust and iron filings. Played with fingers, palms, and belly bouncing against my narrow mouth. Who am I?',
+    options: ['Mridangam', 'Kanjira', 'Ghatam', 'Matka'],
+    correctIndex: 2,
+    explanation: 'The Ghatam is a clay percussion pot baked at extreme heat with metallic dust. Striking its mouth and pressing it against the performer’s bare abdomen creates deep resonant bass "gumki" beats.',
+    instrumentName: 'Ghatam',
+    instrumentHindi: 'घटम',
+    category: 'Ghana (Idiophone)',
+  },
+  {
+    id: 'riddle-santoor',
+    riddle: 'A trapezoidal walnut box carrying a hundred steel strings from the serene snow valleys of Kashmir, struck by delicate curved walnut mallets. Who am I?',
+    options: ['Swarmandal', 'Santoor', 'Sarod', 'Harmonium'],
+    correctIndex: 1,
+    explanation: 'Originally called "Shatha Tantri Veena" (hundred-stringed lute) in ancient texts, the Santoor was adapted into Hindustani classical concert music by legendary maestro Pandit Shivkumar Sharma.',
+    instrumentName: 'Santoor',
+    instrumentHindi: 'संतूर',
+    category: 'Tata (Hammered String)',
+  },
+  {
+    id: 'riddle-damru',
+    riddle: 'Shaped like an hourglass, held in the hand of Lord Shiva. When shaken, a knotted cord strikes both hide faces to beat the cosmic rhythm of creation. Who am I?',
+    options: ['Damru', 'Udukkai', 'Dhol', 'Hudka'],
+    correctIndex: 0,
+    explanation: 'The Damru is Shiva’s sacred drum. In Sanskrit tradition, the 14 sounds of the Maheshwara Sutras (the foundation of Sanskrit grammar) emerged from the beats of Lord Shiva’s Damru.',
+    instrumentName: 'Damru',
+    instrumentHindi: 'डमरू',
+    category: 'Avanaddha (Percussion)',
+  },
+  {
+    id: 'riddle-mridangam',
+    riddle: 'Lord Ganesha’s sacred rhythm vessel, an ancient barrel drum whose left face is tuned at every concert using fresh wet semolina flour. Who am I?',
+    options: ['Pakhawaj', 'Mridangam', 'Tavil', 'Chenda'],
+    correctIndex: 1,
+    explanation: 'The Mridangam is the primary percussion of South Indian Carnatic music. Applying a moist mixture of semolina flour and water (Rava) to the left head creates its characteristic low hum.',
+    instrumentName: 'Mridangam',
+    instrumentHindi: 'मृदंगम',
+    category: 'Avanaddha (Percussion)',
+  },
+  {
+    id: 'riddle-sitar',
+    riddle: 'Created with a seasoned gourd, arched curved metal frets, and 11 to 13 sympathetic wires below the main melody strings that ring without ever being touched. Who am I?',
+    options: ['Sitar', 'Veena', 'Rudra Veena', 'Sursingar'],
+    correctIndex: 0,
+    explanation: 'The Sitar’s sympathetic strings ("Taraf") vibrate on their own through harmonic resonance whenever matching notes are plucked on the upper melody strings, generating a shimmering acoustic halo.',
+    instrumentName: 'Sitar',
+    instrumentHindi: 'सितार',
+    category: 'Tata (Plucked String)',
+  },
+  {
+    id: 'riddle-dholak',
+    riddle: 'From wedding sangeets to harvest fairs and qawwalis across Punjab and Uttar Pradesh, my two rope-tuned heads produce the heartbeat of folk India. Who am I?',
+    options: ['Dholak', 'Dhol', 'Khol', 'Pakhawaj'],
+    correctIndex: 0,
+    explanation: 'The Dholak is the quintessential folk drum of North India. The bass head has a special paste ("dholak masala") on the inner surface that yields a pitch-flexible, soulful thump.',
+    instrumentName: 'Dholak',
+    instrumentHindi: 'ढोलक',
+    category: 'Avanaddha (Percussion)',
+  },
+];
